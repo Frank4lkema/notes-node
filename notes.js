@@ -40,7 +40,7 @@ var getAll = () =>{
 var getNote = (title) =>{
   var notes = fetchNotes();
   var note = notes.filter((note)=> note.title === title);
-  return note[0];
+  return note[0];.
 }
 
 var removeNote = (title) => {
@@ -56,6 +56,7 @@ var removeNote = (title) => {
 
 
 var logNote = (note)=> {
+  debugger;
   console.log(`Title: ${note.title}`);
   console.log("-----");
   console.log(`Body:${note.body}`);
