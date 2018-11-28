@@ -23,19 +23,15 @@ if(command === 'add'){
       console.log("Sorry this title is already in use");
     } else {
       console.log("Yeah the title is saved to the database!");
-      console.log("-------");
-      console.log(` Title ${note.title}`);
-      console.log(` Body ${note.body}`);
-    }
+      notes.logNote(note);
+       }
 } else if (command === 'list'){
     notes.getAll();
 } else if (command === 'read'){
     var note = notes.getNote(argv.title);
 
     if (note){
-      console.log(`Title: ${note.title}`);
-      console.log("-----");
-      console.log(`Body:${note.body}`);
+      notes.logNote(note);
     } else {
       console.log("Note is note Found");
     }
